@@ -16,7 +16,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
  * Responsavel pela entidade, onde os dados das informacoes é armazenada
  * possui os atributos da classe pessoa como nome, idade, resumo...
  */
-@Document("Persons")
+
+@Document
 public class Person implements Serializable{
     
     private static final long serialVersionUID = 1L;
@@ -31,6 +32,56 @@ public class Person implements Serializable{
     private String summary;
 
     List<String> infos;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
+    public List<String> getInfos() {
+        return infos;
+    }
+
+    public void setInfos(List<String> infos) {
+        this.infos = infos;
+    }
+
+    
 
 
 
